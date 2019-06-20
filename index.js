@@ -42,7 +42,7 @@ PlayCanvasWebpackPlugin.prototype.apply = function (compiler) {
                         {
                             form.append("branchId", `${options.branchId}`)
                         }
-                        form.append("file", content, {
+                        form.append("file", filename.value ? filename.value : content, {
                             filename: filename.path,
                             contentType: "text/javascript"
                         })
